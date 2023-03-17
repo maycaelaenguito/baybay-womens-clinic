@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Libre Baskerville', serif;
+}
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Comforter+Brush&family=DM+Sans:wght@400;500;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@500;600;700;800;900&family=Open+Sans:wght@800&family=Playfair+Display:wght@800&family=Poppins:wght@300;400;500&display=swap');
+
+body{
+    overflow: hidden;
+}
+.image-1 {
+    background: url(images/Home.png);
+    background-size: cover;
+    height: 100vh;
+}
+.image-2{
+    background-color: #8B97FD;
+}
+.image-2 IMG{
+    position: absolute;
+    top: 15vh;
+    right: 7vw;
+}
+.text img{
+    margin-top: 25vh;
+}
+.text h3 {
+    color: #587D9F;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+}
+.text h1{
+    font-family: 'Libre Baskerville', serif;
+    font-size: 70px
+}
+.text .btn, .row .btn{
+    background-color: #587D9F;
+    color: white;
+    font-size: 20px;
+    padding: 5px 20px;
+    font-family: 'Poppins', sans-serif;  
+    transition: .3s;
+    text-decoration: none;
+}
+.text .btn:hover{
+    background-color: #8B97FD;
+    color: white;
+    transform: scale(1.05);
+}
+.row .btn:hover{
+    background-color: #8B97FD;
+    color: white;
+    transform: scale(1.05);
+}
+.log-in a{
+    position: absolute;
+    right: 16vw;
+}
+#submitButton{
+    position: absolute;
+    left: 41vw;
+}
+#resetButton{
+    position: absolute;
+    right: 41vw;
+}
+header h1{
+    margin-top: 5vh;
+}
+.fink {
+    background-color: #587D9F;
+    color: white;
+}
+form label, h3, p, input{
+    font-family: 'Poppins', sans-serif;  
+}
+a{
+    font-family: 'Poppins', sans-serif;  
+    text-decoration: none;
+}
+.log-in input{
+    margin: 2vh 25vw;
+}
+.log-in label{
+    margin: 0 25vw;
+}
+#signup-form{
+    background-color: #0a4c8a;
+    min-width: 25vw;
+    padding: 20px;
+    border-radius: 20px;
+}
+.form-group span{
+    color: crimson;
+}
+.form-group{
+    margin: 2rem;
+}
+.sform{
+    display: flex;
+}
+#signup-form{
+    margin: 50px auto;
+}
+button.sign-up, button.close{
+    margin: 10px;
+    min-width: 45%;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    color: white;
+    transition: .3s;
+    font-family: 'Poppins', sans-serif;  
+}
+
+button.sign-up:hover {
+    background-color: #8B97FD;
+    transform: scale(1.05);
+}
+button.close:hover {
+    background-color: #8B97FD;
+    transform: scale(1.05);
+    border: none;
+}
+.form-group input{
+    border-radius: 5px;
+    height: 2rem;
+}
+
+@media screen and (min-width: 1125px) and (max-width: 1575px){
+    .image-2 img {
+        width: 250px;
+    }
+    .text h1 {
+        font-size: 50px;
+    }
+}
+
+@media screen and (min-width: 1125px) and (max-width: 1575px){
+    .image-2 img {
+        width: 250px;
+    }
+    .text h1 {
+        font-size: 50px;
+    }
+}
+@media screen and (min-width: 841px) and (max-width: 1131px){
+    .image-2 img {
+        width: 250px;
+    }
+    .text h1 {
+        font-size: 50px;
+    }
+    #submitButton{
+        position: absolute;
+        left: 37vw;
+    }
+    #resetButton{
+        position: absolute;
+        right: 37vw;
+    }
+}
+
+@media screen and (min-width: 575px) and (max-width: 840px){
+    #submitButton{
+        position: absolute;
+        left: 31vw;
+    }
+    #resetButton{
+        position: absolute;
+        right: 31vw;
+    }
+}

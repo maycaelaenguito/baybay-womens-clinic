@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Log in</title>
+    <style>
+        .error-msg {
+      color: red;
+    }
+    </style>
+</head>
+<body class="fink">
+    <header class="text-center">
+        <h1>Baybay Women's Clinic</h1>
+    </header>
+
+        <div class="logo text-center">
+            <img src="images/logo white.png" width="200px">
+        </div>
+        <div class="sform">
+            <form id="signup-form">
+              <h2 class="text-center">Signup Form</h2>
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-4">
+                      <label for="email">Email<span>*</span>:</label>
+                    </div>
+                    <div class="col-8">
+                      <input type="email" id="email" name="email"><br>
+                      <span class="error-msg" id="email-error"></span>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-4">
+                      <label for="username">Username<span>*</span>:</label>
+                    </div>
+                    <div class="col-8">
+                      <input type="text" id="username" name="username"><br>
+                      <span class="error-msg" id="username-error"></span>
+                    </div>
+                 </div>
+              </div>
+
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-4">
+                    <label for="password">Password<span>*</span>:</label>
+                    </div>
+                    <div class="col-8">
+                      <input type="password" id="password" name="password"><br>
+                    <span class="error-msg" id="password-error"></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-4">
+                    <label for="confirm-password">Confirm Password<span>*</span>:</label>
+                  </div>
+                    <div class="col-8">
+                      <input type="password" id="confirm-password" name="confirm-password"><br>
+                    <span class="error-msg" id="confirm-password-error"></span>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="btn sign-up btn-primary">Sign Up</button>
+              <button class="btn close btn-warning">Close</button>
+          </form>
+        </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script>
+      const form = document.getElementById('signup-form');
+      const emailInput = document.getElementById('email');
+      const usernameInput = document.getElementById('username');
+      const passwordInput = document.getElementById('password');
+      const confirmPasswordInput = document.getElementById('confirm-password');
+      const emailError = document.getElementById('email-error');
+      const usernameError = document.getElementById('username-error');
+      const passwordError = document.getElementById('password-error');
+      const confirmPasswordError = document.getElementById('confirm-password-error');
+
+      form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // Validate email
+        if (emailInput.value === '') {
+          emailError.textContent = 'Email is required.';
+        } else {
+          emailError.textContent = '';
+        }
+
+        // Validate username
+        if (usernameInput.value === '') {
+          usernameError.textContent = 'Username is required.';
+        } else {
+          usernameError.textContent = '';
+        }
+
+        // Validate password
+        if (passwordInput.value === '') {
+          passwordError.textContent = 'Password is required.';
+        } else {
+          passwordError.textContent = '';
+        }
+
+        // Validate confirm password
+        if (confirmPasswordInput.value === '') {
+          confirmPasswordError.textContent = 'Confirm password is required.';
+        } else if (confirmPasswordInput.value !== passwordInput.value) {
+          confirmPasswordError.textContent = 'Passwords do not match.';
+        } else {
+          confirmPasswordError.textContent = '';
+        }
+
+        // Submit form if all fields are valid
+        if (emailInput.value !== '' && usernameInput.value !== '' && passwordInput.value !== '' && confirmPasswordInput.value !== '' && confirmPasswordInput.value === passwordInput.value) {
+          window.open('form.html');
+        }
+      });
+
+      const signUpForm = document.querySelector("#signup-form");
+
+      signUpForm.addEventListener("submit", function(event) {
+        event.preventDefault(); // prevent the default form submission
+
+        // get the input values
+        const email = document.querySelector("#email").value;
+        const username = document.querySelector("#username").value;
+        const password = document.querySelector("#password").value;
+        const confirmPassword = document.querySelector("#confirm-password").value;
+
+        // save the input values in local storage
+        localStorage.setItem("email", email);
+        localStorage.setItem("username", username);
+        localStorage.setItem("password", password);
+        localStorage.setItem("confirmPassword", confirmPassword);
+
+        // reset the form
+        signUpForm.reset();
+      });
+
+      const closeButton = document.querySelector(".close");
+
+      closeButton.addEventListener("click", function() {
+        window.location.href = "index.html";
+      });
+
+
+    </script>
+</body>
+</html>
